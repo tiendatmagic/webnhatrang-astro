@@ -6,12 +6,12 @@
   --color-secondary: #215abd;
   --color-on-secondary-fixed-variant: #00429b;
   --color-surface: #faf8ff;
-  --color-action-orange: #FF811B;
+  --color-action-orange: #ff811b;
   --color-on-secondary: #ffffff;
   --color-on-surface: #131b2e;
   --color-on-primary-fixed-variant: #004e59;
   --color-error: #ba1a1a;
-  --color-deep-navy: #0F172A;
+  --color-deep-navy: #0f172a;
   --color-tertiary-fixed-dim: #ffb77b;
   --color-secondary-fixed-dim: #b0c6ff;
   --color-on-primary: #ffffff;
@@ -41,7 +41,7 @@
   --color-on-tertiary-container: #633400;
   --color-on-error: #ffffff;
   --color-tertiary-fixed: #ffdcc2;
-  --color-vibrant-blue: #00B3FF;
+  --color-vibrant-blue: #00b3ff;
   --color-on-primary-fixed: #001f25;
   --color-inverse-on-surface: #eef0ff;
   --color-on-background: #131b2e;
@@ -105,7 +105,7 @@ html {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 
+  box-shadow:
     0 4px 30px rgba(15, 23, 42, 0.03),
     inset 0 1px 1px rgba(255, 255, 255, 0.5);
 }
@@ -115,7 +115,7 @@ html {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 
+  box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
@@ -151,7 +151,9 @@ html {
     radial-gradient(#00bcd4 0.5px, transparent 0.5px),
     radial-gradient(#00bcd4 0.5px, #faf8ff 0.5px);
   background-size: 24px 24px;
-  background-position: 0 0, 12px 12px;
+  background-position:
+    0 0,
+    12px 12px;
   opacity: 0.6;
 }
 
@@ -163,13 +165,15 @@ html {
 }
 
 .glowing-card::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
   padding: 2px;
   background: linear-gradient(135deg, transparent, transparent);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
@@ -189,7 +193,7 @@ html {
 }
 
 .shine-effect::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -60%;
@@ -226,7 +230,11 @@ html {
   bottom: 0;
   left: 16px;
   width: 2px;
-  background: linear-gradient(to bottom, #00bcd4 0%, rgba(0, 188, 212, 0.2) 100%);
+  background: linear-gradient(
+    to bottom,
+    #00bcd4 0%,
+    rgba(0, 188, 212, 0.2) 100%
+  );
 }
 @media (min-width: 1024px) {
   .timeline-line {
@@ -293,8 +301,8 @@ html {
 /* Scroll Animation Framework */
 .scroll-animate {
   opacity: 0;
-  transform: translateY(30px) scale(0.97);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(35px) scale(0.98);
+  transition: all 1.4s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform, opacity;
 }
 
@@ -303,19 +311,66 @@ html {
   transform: translateY(0) scale(1);
 }
 
-.scroll-animate.fade-in-left {
-  transform: translateX(-40px) scale(0.97);
+.scroll-animate.fade-in-up {
+  transform: translateY(40px);
+}
+
+.scroll-animate.fade-in-down {
+  transform: translateY(-40px);
+}
+
+/* .scroll-animate.fade-in-left {
+  transform: translateX(-40px) scale(0.98);
 }
 
 .scroll-animate.fade-in-right {
-  transform: translateX(40px) scale(0.97);
+  transform: translateX(40px) scale(0.98);
+} */
+
+.scroll-animate.zoom-in {
+  transform: scale(0.93);
 }
 
-.scroll-animate.fade-in-left.is-visible,
-.scroll-animate.fade-in-right.is-visible {
+.scroll-animate.fade-in-up.is-visible,
+.scroll-animate.fade-in-down.is-visible,
+.scroll-animate.zoom-in.is-visible {
   opacity: 1;
   transform: translate(0) scale(1);
 }
+
+/* Stagger Animation Delays */
+.delay-75 {
+  transition-delay: 75ms;
+}
+.delay-100 {
+  transition-delay: 100ms;
+}
+.delay-150 {
+  transition-delay: 150ms;
+}
+.delay-200 {
+  transition-delay: 200ms;
+}
+.delay-250 {
+  transition-delay: 250ms;
+}
+.delay-300 {
+  transition-delay: 300ms;
+}
+.delay-350 {
+  transition-delay: 350ms;
+}
+.delay-400 {
+  transition-delay: 400ms;
+}
+.delay-500 {
+  transition-delay: 500ms;
+}
+.delay-600 {
+  transition-delay: 600ms;
+}
+
+/* Disable transitions for accessibility */
 
 /* Disable transitions for accessibility */
 @media (prefers-reduced-motion: reduce) {

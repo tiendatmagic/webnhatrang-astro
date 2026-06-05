@@ -17,8 +17,7 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
     <meta name="generator" content={Astro.generator} />
     
     <!-- SEO Meta Tags -->
@@ -49,8 +48,8 @@ const {
       document.addEventListener("DOMContentLoaded", function () {
         const observerOptions = {
           root: null,
-          rootMargin: "0px",
-          threshold: 0.15,
+          rootMargin: "0px 0px -100px 0px",
+          threshold: 0.2,
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
