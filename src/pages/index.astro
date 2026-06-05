@@ -1,11 +1,48 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
+import Services from '../components/Services.astro';
+import Pricing from '../components/Pricing.astro';
+import Process from '../components/Process.astro';
+import Consultation from '../components/Consultation.astro';
+import Footer from '../components/Footer.astro';
+import FloatingContact from '../components/FloatingContact.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// SEO details
+const title = "Thiết kế Website Nha Trang - Chuẩn SEO, Chuyên nghiệp & Đẳng cấp";
+const description = "Dịch vụ thiết kế website chuyên nghiệp tại Nha Trang với hơn 10 năm kinh nghiệm. Cam kết website chuẩn SEO, tương thích mọi thiết bị di động, tối ưu trải nghiệm người dùng.";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title={title} description={description}>
+  <!-- Top Navigation Bar -->
+  <Navbar />
+
+  <!-- Main Content Areas -->
+  <main class="w-full">
+    <!-- Hero Section / Banner -->
+    <Hero />
+
+    <!-- Experience / About Section -->
+    <Experience />
+
+    <!-- Services Overview Section -->
+    <Services />
+
+    <!-- Pricing Plans Section -->
+    <Pricing />
+
+    <!-- Process Workflow Section -->
+    <Process />
+
+    <!-- Consultation Contact Form Box -->
+    <Consultation />
+  </main>
+
+  <!-- Footer Area -->
+  <Footer />
+
+  <!-- Floating quick contact widgets (Phone, Zalo, Messenger) -->
+  <FloatingContact />
 </Layout>

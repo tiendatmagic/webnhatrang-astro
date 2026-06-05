@@ -1,0 +1,103 @@
+---
+const services = [
+  {
+    title: "Quản trị Website",
+    icon: "settings",
+    price: "1.500.000 vnđ",
+    delay: "0ms",
+    desc: "Bảo trì định kỳ, đăng tải bài viết chuẩn SEO và bảo mật dữ liệu an toàn.",
+    iconClass: "group-hover:rotate-90"
+  },
+  {
+    title: "Quảng cáo Website",
+    icon: "campaign",
+    price: "1.500.000 vnđ",
+    delay: "150ms",
+    desc: "Tăng lưu lượng truy cập qua Google Ads, Facebook Ads tối ưu chuyển đổi.",
+    iconClass: "group-hover:-rotate-12 group-hover:scale-110"
+  },
+  {
+    title: "Gia hạn Website",
+    icon: "update",
+    price: "1.500.000 vnđ",
+    delay: "300ms",
+    desc: "Duy trì máy chủ tốc độ cao và giữ chỗ tên miền thương hiệu liên tục.",
+    iconClass: "group-hover:rotate-180"
+  },
+  {
+    title: "Nâng cấp Website",
+    icon: "upgrade",
+    price: "1.500.000 vnđ",
+    delay: "450ms",
+    desc: "Thiết kế lại chuẩn UI/UX hiện đại và tích hợp các tính năng công nghệ mới.",
+    iconClass: "group-hover:-translate-y-1.5"
+  }
+];
+---
+
+<section
+  id="services"
+  class="py-section-padding-mobile md:py-section-padding-desktop px-gutter bg-gradient-to-br from-surface to-surface-container-low relative overflow-hidden"
+>
+  <!-- Background Blobs -->
+  <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+    <div class="floating-blob w-80 h-80 bg-primary-container/15 top-1/2 left-[80%]" style="animation-duration: 22s; animation-delay: -5s;"></div>
+    <div class="floating-blob w-96 h-96 bg-vibrant-blue/10 bottom-[-50px] left-[-100px]" style="animation-duration: 18s;"></div>
+  </div>
+
+  <div class="max-w-container-max mx-auto relative z-10">
+    <div
+      class="text-center mb-20 space-y-4 scroll-animate fade-in-up is-visible"
+    >
+      <div class="inline-flex items-center gap-2 bg-primary/5 px-4 py-1.5 rounded-full border border-primary/10">
+        <p class="text-xs font-semibold text-primary tracking-widest uppercase">
+          Dịch Vụ Toàn Diện
+        </p>
+      </div>
+      <h2 class="text-headline-lg font-headline-lg text-deep-navy">
+        Các giải pháp dịch vụ phụ trợ
+      </h2>
+      <p
+        class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed"
+      >
+        Hơn 10 năm hoạt động về dịch vụ Thiết kế Web Nha Trang, chúng tôi tự
+        tin giúp quý khách sở hữu website chuyên nghiệp để quảng bá thương hiệu.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {services.map((service) => (
+        <div
+          class="glass-premium glowing-card rounded-3xl p-8 flex flex-col justify-between hover:shadow-xl hover:shadow-primary-container/5 transition-all duration-500 group scroll-animate fade-in-up is-visible hover:-translate-y-2 cursor-pointer"
+          style={`transition-delay: ${service.delay}`}
+        >
+          <div>
+            <!-- Icon with custom hover animation -->
+            <div
+              class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-primary-container/20 flex items-center justify-center mb-8 border border-primary/10"
+            >
+              <span
+                class={`material-symbols-outlined text-primary text-3xl transition-all duration-500 ease-out ${service.iconClass}`}
+                data-icon={service.icon}
+              >
+                {service.icon}
+              </span>
+            </div>
+            <h3 class="text-headline-md font-headline-md text-deep-navy font-bold mb-3">
+              {service.title}
+            </h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6 font-medium">
+              {service.desc}
+            </p>
+          </div>
+          <div class="border-t border-outline-variant/30 pt-6 mt-2">
+            <p class="text-xs text-on-surface-variant font-semibold uppercase tracking-wider mb-1">
+              Phí duy trì
+            </p>
+            <p class="text-lg font-black text-primary">{service.price}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
