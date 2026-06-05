@@ -85,52 +85,43 @@ const plans = [
       </p>
     </div>
     
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8 items-stretch">
       {plans.map((plan) => (
         <div
-          class={`glass-premium glowing-card rounded-3xl p-6 md:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-500 scroll-animate fade-in-up is-visible relative hover:-translate-y-2 cursor-pointer ${
-            plan.popular ? 'border-2 border-primary/60 shadow-lg shadow-primary-container/10 lg:scale-[1.03]' : ''
-          }`}
+          class="glass-premium glowing-card rounded-2xl sm:rounded-3xl p-3 sm:p-8 flex flex-col justify-between hover:shadow-xl transition-all duration-500 scroll-animate fade-in-up is-visible relative hover:-translate-y-2 cursor-pointer"
           style={`transition-delay: ${plan.delay}`}
         >
-          <!-- Special Popular Tag -->
-          {plan.popular && (
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-primary text-on-primary text-xxs font-black px-4 py-1 rounded-full uppercase tracking-wider shadow-md border border-white/20 select-none">
-              Phổ biến nhất
-            </div>
-          )}
-
           {plan.discount && (
             <div
-              class="absolute top-4 right-4 bg-action-orange text-white text-xxs font-black px-2.5 py-1 rounded-full shadow-sm select-none"
+              class="absolute top-2 right-2 bg-action-orange text-white text-[9px] sm:text-xxs font-black px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full shadow-sm select-none"
             >
               {plan.discount}
             </div>
           )}
           
           <div>
-            <span class="text-xs font-bold text-on-surface-variant/70 uppercase tracking-widest block mb-1">
+            <span class="text-[10px] sm:text-xs font-bold text-on-surface-variant/70 uppercase tracking-widest block mb-1">
               Gói dịch vụ
             </span>
-            <h3 class="text-headline-md font-headline-md text-deep-navy font-bold mb-4">
+            <h3 class="text-sm sm:text-headline-md text-deep-navy font-bold mb-2 sm:mb-4">
               {plan.name}
             </h3>
             
-            <div class="flex items-baseline mb-8">
-              <span class="text-3xl md:text-4xl font-black text-primary tracking-tight">
+            <div class="flex flex-col sm:flex-row sm:items-baseline mb-4 sm:mb-8">
+              <span class="text-base sm:text-3xl md:text-4xl font-black text-primary tracking-tight">
                 {plan.price}
               </span>
-              <span class="text-xs font-bold text-on-surface-variant/80 ml-2 uppercase tracking-wide">
-                VNĐ / trọn gói
+              <span class="text-[10px] sm:text-xs font-bold text-on-surface-variant/80 sm:ml-2 uppercase tracking-wide">
+                VNĐ
               </span>
             </div>
             
-            <div class="border-t border-outline-variant/30 my-6"></div>
+            <div class="border-t border-outline-variant/30 my-3 sm:my-6"></div>
             
-            <ul class="space-y-4 mb-8 text-on-surface-variant text-sm font-medium">
+            <ul class="space-y-2 sm:space-y-4 mb-4 sm:mb-8 text-on-surface-variant text-[11px] sm:text-sm font-medium">
               {plan.features.map((feature) => (
-                <li class="flex items-start gap-3 group/item">
-                  <span class="text-primary text-sm transition-transform duration-300 group-hover/item:translate-x-1">➤</span> 
+                <li class="flex items-start gap-1.5 sm:gap-3 group/item">
+                  <span class="text-primary text-[10px] sm:text-xs transition-all duration-500 group-hover/item:rotate-180 group-hover/item:scale-125 block shrink-0 mt-0.5 sm:mt-1 select-none">✦</span> 
                   <span>{feature}</span>
                 </li>
               ))}
@@ -138,11 +129,7 @@ const plans = [
           </div>
           
           <a
-            class={`block w-full text-center py-3.5 rounded-full font-bold text-xs tracking-wider transition-all duration-300 border shine-effect cursor-pointer ${
-              plan.popular
-                ? 'bg-gradient-primary text-on-primary border-white/20 shadow-md shadow-primary-container/20 hover:shadow-lg'
-                : 'bg-white/50 text-primary border-primary/20 hover:bg-primary hover:text-white hover:border-transparent'
-            }`}
+            class="block w-full text-center py-2 sm:py-3.5 rounded-full font-bold text-[10px] sm:text-xs tracking-wider transition-all duration-300 border bg-gradient-primary text-on-primary border-white/20 shadow-md shadow-primary-container/20 hover:shadow-lg shine-effect cursor-pointer"
             href="https://zalo.me/0933663112"
           >
             ĐĂNG KÝ NGAY
