@@ -75,36 +75,36 @@ const steps = [
     </div>
 
     <!-- Process Grid Layout -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
       {steps.map((item) => (
         <div
-          class="card rounded-3xl bg-base-100 border border-base-200/50 shadow-xl hover:shadow-2xl hover:border-primary/20 hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden cursor-pointer"
+          class="card rounded-2xl sm:rounded-3xl bg-base-100 border border-base-200/50 shadow-xl hover:shadow-2xl hover:border-primary/20 hover:-translate-y-2 transition-all duration-500 group relative overflow-hidden cursor-pointer"
         >
           <!-- Watermark step number in background -->
-          <div class="absolute right-4 bottom-2 text-8xl font-black text-base-content/5 opacity-10 group-hover:scale-110 group-hover:text-primary/10 transition-all duration-500 select-none">
+          <div class="absolute right-2 bottom-1 sm:right-4 sm:bottom-2 text-6xl sm:text-8xl font-black text-base-content/5 opacity-10 group-hover:scale-110 group-hover:text-primary/10 transition-all duration-500 select-none">
             {item.step}
           </div>
           
-          <div class="card-body p-8 flex flex-col justify-between h-full relative z-10">
+          <div class="card-body p-4 sm:p-8 flex flex-col justify-between h-full relative z-10">
             <div>
               <!-- Step Header -->
-              <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center justify-between mb-4 sm:mb-6">
                 <!-- Icon with colorful gradient background -->
-                <div class={`w-14 h-14 rounded-2xl bg-gradient-to-tr ${item.color} text-white flex items-center justify-center shadow-lg`}>
-                  <span class="material-symbols-outlined text-2xl font-bold">
+                <div class={`w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-gradient-to-tr ${item.color} text-white flex items-center justify-center shadow-lg`}>
+                  <span class="material-symbols-outlined text-lg sm:text-2xl font-bold">
                     {item.icon}
                   </span>
                 </div>
                 <!-- Step Number Badge -->
-                <span class="badge badge-lg bg-base-200 text-base-content/70 border-none font-extrabold rounded-full px-4">
+                <span class="text-[9px] sm:text-xs py-1 px-2.5 sm:px-4 bg-base-200 text-base-content/70 font-extrabold rounded-full">
                   Bước {item.step}
                 </span>
               </div>
               
-              <h3 class="card-title text-xl font-bold text-base-content mb-3 group-hover:text-primary transition-colors">
+              <h3 class="card-title text-sm sm:text-xl font-bold text-base-content mb-2 sm:mb-3 group-hover:text-primary transition-colors">
                 {item.title}
               </h3>
-              <p class="text-sm text-base-content/70 leading-relaxed font-medium">
+              <p class="text-[11px] sm:text-sm text-base-content/70 leading-relaxed font-semibold sm:font-medium">
                 {item.desc}
               </p>
             </div>

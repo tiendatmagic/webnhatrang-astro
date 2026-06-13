@@ -65,38 +65,38 @@ const services = [
       </p>
     </div>
     
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
       {services.map((service) => (
         <div
-          class="card rounded-3xl bg-base-100 shadow-xl border border-base-200/50 hover:shadow-2xl hover:border-primary/20 hover:-translate-y-2 transition-all duration-500 group scroll-animate fade-in-up cursor-pointer"
+          class="card rounded-2xl sm:rounded-3xl bg-base-100 shadow-xl border border-base-200/50 hover:shadow-2xl hover:border-primary/20 hover:-translate-y-2 transition-all duration-500 group scroll-animate fade-in-up cursor-pointer"
           style={`transition-delay: ${service.delay}`}
         >
-          <div class="card-body p-6 sm:p-8 flex flex-col justify-between h-full">
+          <div class="card-body p-4 sm:p-8 flex flex-col justify-between h-full">
             <div>
               <!-- Icon Container -->
               <div
-                class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 border border-primary/10"
+                class="w-10 h-10 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center mb-4 sm:mb-6 border border-primary/10"
               >
                 <span
-                  class={`material-symbols-outlined text-primary text-3xl transition-all duration-500 ease-out ${service.iconClass}`}
+                  class={`material-symbols-outlined text-primary text-xl sm:text-3xl transition-all duration-500 ease-out ${service.iconClass}`}
                 >
                   {service.icon}
                 </span>
               </div>
               
-              <h3 class="card-title text-lg font-bold text-base-content mb-3">
+              <h3 class="card-title text-sm sm:text-lg font-bold text-base-content mb-2 sm:mb-3">
                 {service.title}
               </h3>
-              <p class="text-sm text-base-content/70 leading-relaxed font-medium mb-6">
+              <p class="text-[11px] sm:text-sm text-base-content/70 leading-relaxed font-medium mb-4 sm:mb-6">
                 {service.desc}
               </p>
             </div>
             
-            <div class="border-t border-base-200 pt-6">
-              <p class="text-xs text-base-content/50 font-bold uppercase tracking-wider mb-1">
+            <div class="border-t border-base-200 pt-4 sm:pt-6">
+              <p class="text-[9px] sm:text-xs text-base-content/50 font-bold uppercase tracking-wider mb-0.5 sm:mb-1">
                 Phí duy trì
               </p>
-              <p class="text-lg font-black text-primary">{service.price}</p>
+              <p class="text-sm sm:text-lg font-black text-primary">{service.price}</p>
             </div>
           </div>
         </div>

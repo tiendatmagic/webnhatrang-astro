@@ -85,10 +85,10 @@ const plans = [
       </p>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 items-stretch">
       {plans.map((plan) => (
         <div
-          class={`card rounded-3xl bg-base-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 scroll-animate fade-in-up relative cursor-pointer border ${
+          class={`card rounded-2xl sm:rounded-3xl bg-base-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 scroll-animate fade-in-up relative cursor-pointer border ${
             plan.popular 
               ? 'border-primary shadow-primary/10 ring-2 ring-primary/20 lg:scale-[1.03]' 
               : 'border-base-200/50'
@@ -96,43 +96,43 @@ const plans = [
           style={`transition-delay: ${plan.delay}`}
         >
           {plan.popular && (
-            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-extrabold px-4 py-1 rounded-full shadow-md select-none uppercase z-20">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-[9px] sm:text-xs font-extrabold px-2 sm:px-4 py-1 rounded-full shadow-md select-none uppercase z-20">
               KHUYÊN DÙNG
             </div>
           )}
 
           {plan.discount && !plan.popular && (
             <div
-              class="absolute top-3 right-3 badge badge-secondary font-bold text-[10px] px-2.5 py-1"
+              class="absolute top-2 right-2 sm:top-3 sm:right-3 badge badge-secondary font-bold text-[8px] sm:text-[10px] px-1.5 sm:px-2.5 py-0.5 sm:py-1"
             >
               {plan.discount}
             </div>
           )}
           
-          <div class="card-body p-6 sm:p-8 flex flex-col justify-between h-full">
+          <div class="card-body p-4 sm:p-8 flex flex-col justify-between h-full">
             <div>
-              <span class="text-xs font-bold text-base-content/50 uppercase tracking-widest block mb-1">
+              <span class="text-[9px] sm:text-xs font-bold text-base-content/50 uppercase tracking-widest block mb-1">
                 Gói dịch vụ
               </span>
-              <h3 class="text-xl font-black text-base-content mb-4">
+              <h3 class="text-base sm:text-xl font-black text-base-content mb-2 sm:mb-4">
                 {plan.name}
               </h3>
               
-              <div class="flex items-baseline mb-6">
-                <span class="text-3xl sm:text-4xl font-black text-primary tracking-tight">
+              <div class="flex items-baseline mb-3 sm:mb-6">
+                <span class="text-lg sm:text-3xl font-black text-primary tracking-tight">
                   {plan.price}
                 </span>
-                <span class="text-xs font-extrabold text-base-content/60 ml-2 uppercase tracking-wide">
+                <span class="text-[9px] sm:text-xs font-extrabold text-base-content/60 ml-1 sm:ml-2 uppercase tracking-wide">
                   VNĐ
                 </span>
               </div>
               
-              <div class="border-t border-base-200 my-6"></div>
+              <div class="border-t border-base-200 my-4 sm:my-6"></div>
               
-              <ul class="space-y-4 mb-8 text-base-content/80 text-sm font-semibold">
+              <ul class="space-y-2 sm:space-y-4 mb-4 sm:mb-8 text-base-content/80 text-[11px] sm:text-sm font-semibold">
                 {plan.features.map((feature) => (
-                  <li class="flex items-start gap-3 group/item">
-                    <span class="text-primary text-xs transition-all duration-500 group-hover/item:rotate-180 group-hover/item:scale-125 block shrink-0 mt-1 select-none">✦</span> 
+                  <li class="flex items-start gap-2 sm:gap-3 group/item">
+                    <span class="text-primary text-[9px] sm:text-xs transition-all duration-500 group-hover/item:rotate-180 group-hover/item:scale-125 block shrink-0 mt-1 select-none">✦</span> 
                     <span>{feature}</span>
                   </li>
                 ))}
@@ -140,7 +140,7 @@ const plans = [
             </div>
             
             <a
-              class={`btn rounded-full font-bold text-xs tracking-wider transition-all duration-300 w-full mt-auto ${
+              class={`btn btn-sm sm:btn-md rounded-full font-bold text-[10px] sm:text-xs tracking-wider transition-all duration-300 w-full mt-auto ${
                 plan.popular 
                   ? 'btn-primary text-white hover:shadow-lg shadow-md border-none' 
                   : 'btn-outline btn-primary hover:text-white'
