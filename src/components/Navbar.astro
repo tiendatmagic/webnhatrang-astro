@@ -1,155 +1,123 @@
 ---
-
 ---
 
 <nav
   id="main-nav"
-  class="fixed top-6 inset-x-6 sm:inset-x-8 md:inset-x-12 lg:inset-x-16 mx-auto w-auto max-w-container-max z-50 flex justify-between items-center px-6 sm:px-8 md:px-10 py-3 bg-white md:bg-white/60 md:backdrop-blur-xl border border-white/40 rounded-full shadow-lg transition-all duration-500 ease-out"
+  class="navbar fixed top-6 inset-x-6 sm:inset-x-8 md:inset-x-12 lg:inset-x-16 mx-auto w-auto max-w-[1280px] z-50 bg-white/70 backdrop-blur-xl border border-white/40 rounded-full shadow-lg transition-all duration-500 ease-out px-4 md:px-8"
 >
-  <!-- Logo -->
-  <div class="flex items-center gap-2">
-    <a
-      href="#"
-      class="flex items-center gap-2 hover:scale-105 transition-transform duration-300"
-    >
+  <div class="navbar-start">
+    <!-- Dropdown for mobile -->
+    <div class="dropdown lg:hidden">
+      <button
+        id="mobile-menu-btn"
+        tabindex="0"
+        role="button"
+        class="btn btn-ghost btn-circle text-primary hover:bg-primary/10"
+        aria-label="Toggle Menu"
+      >
+        <span class="material-symbols-outlined text-2xl select-none" id="menu-icon">menu</span>
+      </button>
+      <ul
+        id="mobile-menu"
+        tabindex="0"
+        class="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow-2xl bg-base-100 rounded-box w-64 border border-base-200/50 hidden"
+      >
+        <li>
+          <a class="flex items-center gap-3 text-primary font-bold py-2.5 bg-primary/5 rounded-lg" href="#">
+            <span class="material-symbols-outlined text-[20px]">home</span>
+            <span>Trang chủ</span>
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-3 py-2.5 hover:text-primary transition-all rounded-lg" href="#services">
+            <span class="material-symbols-outlined text-[20px]">design_services</span>
+            <span>Dịch vụ</span>
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-3 py-2.5 hover:text-primary transition-all rounded-lg" href="#pricing">
+            <span class="material-symbols-outlined text-[20px]">payments</span>
+            <span>Bảng giá</span>
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-3 py-2.5 hover:text-primary transition-all rounded-lg" href="#process">
+            <span class="material-symbols-outlined text-[20px]">account_tree</span>
+            <span>Quy trình</span>
+          </a>
+        </li>
+        <li>
+          <a class="flex items-center gap-3 py-2.5 hover:text-primary transition-all rounded-lg" href="#contact">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            <span>Liên hệ</span>
+          </a>
+        </li>
+        <li class="mt-3">
+          <a
+            class="btn btn-primary btn-sm rounded-full text-white font-bold text-center flex items-center justify-center py-2"
+            href="https://zalo.me/0933663112"
+          >
+            BẮT ĐẦU NGAY
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2 hover:scale-105 transition-transform duration-300 ml-2 lg:ml-0">
       <img
         src="/logo.jpg"
         alt="WEB NHA TRANG Logo"
         class="w-10 h-10 md:w-11 md:h-11 rounded-full object-contain border border-primary/20 shadow-sm"
       />
+      <span class="font-black text-lg md:text-xl tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        WEB NHA TRANG
+      </span>
     </a>
   </div>
 
-  <!-- Desktop menu -->
-  <div class="hidden lg:flex items-center gap-7">
-    <a
-      class="flex items-center gap-2 text-primary font-bold text-[15px] tracking-wide relative py-1 transition-all duration-300 hover:scale-105"
-      href="#"
-    >
-      <span class="material-symbols-outlined text-[20px]">home</span>
-      <span>Trang chủ</span>
-    </a>
-    <a
-      class="flex items-center gap-2 text-on-surface-variant hover:text-primary font-semibold text-[15px] tracking-wide transition-all duration-300 py-1 hover:scale-105 relative group"
-      href="#services"
-    >
-      <span
-        class="material-symbols-outlined text-[20px] text-on-surface-variant/70 group-hover:text-primary transition-colors"
-        >design_services</span
-      >
-      <span>Dịch vụ</span>
-    </a>
-    <a
-      class="flex items-center gap-2 text-on-surface-variant hover:text-primary font-semibold text-[15px] tracking-wide transition-all duration-300 py-1 hover:scale-105 relative group"
-      href="#pricing"
-    >
-      <span
-        class="material-symbols-outlined text-[20px] text-on-surface-variant/70 group-hover:text-primary transition-colors"
-        >payments</span
-      >
-      <span>Bảng giá</span>
-    </a>
-    <a
-      class="flex items-center gap-2 text-on-surface-variant hover:text-primary font-semibold text-[15px] tracking-wide transition-all duration-300 py-1 hover:scale-105 relative group"
-      href="#process"
-    >
-      <span
-        class="material-symbols-outlined text-[20px] text-on-surface-variant/70 group-hover:text-primary transition-colors"
-        >account_tree</span
-      >
-      <span>Quy trình</span>
-    </a>
-    <a
-      class="flex items-center gap-2 text-on-surface-variant hover:text-primary font-semibold text-[15px] tracking-wide transition-all duration-300 py-1 hover:scale-105 relative group"
-      href="#contact"
-    >
-      <span
-        class="material-symbols-outlined text-[20px] text-on-surface-variant/70 group-hover:text-primary transition-colors"
-        >chat</span
-      >
-      <span>Liên hệ</span>
-    </a>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1 gap-2 font-semibold text-[15px]">
+      <li>
+        <a class="flex items-center gap-1.5 text-primary active:bg-primary/10 rounded-full px-4 py-2" href="#">
+          <span class="material-symbols-outlined text-[18px]">home</span>
+          <span>Trang chủ</span>
+        </a>
+      </li>
+      <li>
+        <a class="flex items-center gap-1.5 hover:text-primary hover:bg-primary/5 active:bg-primary/10 rounded-full px-4 py-2 transition-all" href="#services">
+          <span class="material-symbols-outlined text-[18px]">design_services</span>
+          <span>Dịch vụ</span>
+        </a>
+      </li>
+      <li>
+        <a class="flex items-center gap-1.5 hover:text-primary hover:bg-primary/5 active:bg-primary/10 rounded-full px-4 py-2 transition-all" href="#pricing">
+          <span class="material-symbols-outlined text-[18px]">payments</span>
+          <span>Bảng giá</span>
+        </a>
+      </li>
+      <li>
+        <a class="flex items-center gap-1.5 hover:text-primary hover:bg-primary/5 active:bg-primary/10 rounded-full px-4 py-2 transition-all" href="#process">
+          <span class="material-symbols-outlined text-[18px]">account_tree</span>
+          <span>Quy trình</span>
+        </a>
+      </li>
+      <li>
+        <a class="flex items-center gap-1.5 hover:text-primary hover:bg-primary/5 active:bg-primary/10 rounded-full px-4 py-2 transition-all" href="#contact">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>Liên hệ</span>
+        </a>
+      </li>
+    </ul>
   </div>
 
-  <!-- Action button & Mobile Toggle -->
-  <div class="flex items-center gap-4">
+  <div class="navbar-end">
     <a
-      class="hidden sm:inline-block bg-gradient-primary text-on-primary px-6 py-2.5 rounded-full font-bold text-xs tracking-wider hover:shadow-lg hover:shadow-primary-container/20 transition-all duration-300 transform hover:scale-105 border border-white/20 shine-effect cursor-pointer"
+      class="btn btn-primary text-white rounded-full font-bold px-6 border-none hover:shadow-lg shadow-md transition-all duration-300 hover:scale-105"
       href="https://zalo.me/0933663112"
+      style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-vibrant-blue) 100%);"
     >
       BẮT ĐẦU NGAY
-    </a>
-
-    <!-- Mobile Hamburger Menu Button -->
-    <button
-      id="mobile-menu-btn"
-      class="lg:hidden text-primary hover:text-primary/80 focus:outline-none w-10 h-10 flex items-center justify-center rounded-full bg-black/5 active:bg-black/10 hover:bg-black/10 transition-colors"
-      aria-label="Toggle Menu"
-    >
-      <span
-        class="material-symbols-outlined text-2xl select-none"
-        id="menu-icon">menu</span
-      >
-    </button>
-  </div>
-
-  <!-- Mobile Dropdown Menu (Opaque Background to prevent text overlapping) -->
-  <div
-    id="mobile-menu"
-    class="hidden absolute top-[115%] left-0 w-full bg-white border border-outline-variant/30 rounded-3xl flex flex-col p-5 space-y-2.5 shadow-2xl lg:hidden transition-all duration-300 z-50"
-  >
-    <a
-      class="flex items-center gap-3 text-primary font-bold text-[17px] border-l-4 border-primary pl-4 py-3 bg-primary/5 rounded-r-2xl transition-all duration-200 shadow-sm"
-      href="#"
-    >
-      <span class="material-symbols-outlined text-2xl">home</span>
-      <span>Trang chủ</span>
-    </a>
-    <a
-      class="flex items-center gap-3 text-on-surface-variant hover:text-primary hover:bg-primary/5 font-semibold text-[17px] pl-4 py-3 border-l-4 border-transparent hover:border-primary/50 rounded-r-2xl transition-all duration-200"
-      href="#services"
-    >
-      <span
-        class="material-symbols-outlined text-2xl text-on-surface-variant/70"
-        >design_services</span
-      >
-      <span>Dịch vụ</span>
-    </a>
-    <a
-      class="flex items-center gap-3 text-on-surface-variant hover:text-primary hover:bg-primary/5 font-semibold text-[17px] pl-4 py-3 border-l-4 border-transparent hover:border-primary/50 rounded-r-2xl transition-all duration-200"
-      href="#pricing"
-    >
-      <span
-        class="material-symbols-outlined text-2xl text-on-surface-variant/70"
-        >payments</span
-      >
-      <span>Bảng giá</span>
-    </a>
-    <a
-      class="flex items-center gap-3 text-on-surface-variant hover:text-primary hover:bg-primary/5 font-semibold text-[17px] pl-4 py-3 border-l-4 border-transparent hover:border-primary/50 rounded-r-2xl transition-all duration-200"
-      href="#process"
-    >
-      <span
-        class="material-symbols-outlined text-2xl text-on-surface-variant/70"
-        >account_tree</span
-      >
-      <span>Quy trình</span>
-    </a>
-    <a
-      class="flex items-center gap-3 text-on-surface-variant hover:text-primary hover:bg-primary/5 font-semibold text-[17px] pl-4 py-3 border-l-4 border-transparent hover:border-primary/50 rounded-r-2xl transition-all duration-200"
-      href="#contact"
-    >
-      <span
-        class="material-symbols-outlined text-2xl text-on-surface-variant/70"
-        >chat</span
-      >
-      <span>Liên hệ</span>
-    </a>
-    <a
-      class="bg-gradient-primary text-on-primary text-center py-3.5 rounded-full font-bold text-sm tracking-wider uppercase shadow-md hover:shadow-lg cursor-pointer transition-all duration-300 shine-effect mt-2"
-      href="https://zalo.me/0933663112"
-    >
-      Bắt đầu ngay
     </a>
   </div>
 </nav>
@@ -161,7 +129,8 @@
   const menuIcon = document.getElementById("menu-icon");
 
   if (mobileMenuBtn && mobileMenu && menuIcon) {
-    mobileMenuBtn.addEventListener("click", () => {
+    mobileMenuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
       const isHidden = mobileMenu.classList.contains("hidden");
       if (isHidden) {
         mobileMenu.classList.remove("hidden");
@@ -170,6 +139,12 @@
         mobileMenu.classList.add("hidden");
         menuIcon.textContent = "menu";
       }
+    });
+
+    // Close when clicking outside
+    document.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      menuIcon.textContent = "menu";
     });
 
     const mobileLinks = mobileMenu.querySelectorAll("a");
@@ -186,23 +161,11 @@
   window.addEventListener("scroll", () => {
     if (nav) {
       if (window.scrollY > 50) {
-        nav.classList.remove("top-6", "py-3", "bg-white", "md:bg-white/60");
-        nav.classList.add(
-          "top-3",
-          "py-2",
-          "bg-white",
-          "md:bg-white/85",
-          "shadow-xl",
-        );
+        nav.classList.remove("top-6", "bg-white/70");
+        nav.classList.add("top-3", "bg-white/95", "shadow-xl");
       } else {
-        nav.classList.remove(
-          "top-3",
-          "py-2",
-          "bg-white",
-          "md:bg-white/85",
-          "shadow-xl",
-        );
-        nav.classList.add("top-6", "py-3", "bg-white", "md:bg-white/60");
+        nav.classList.remove("top-3", "bg-white/95", "shadow-xl");
+        nav.classList.add("top-6", "bg-white/70");
       }
     }
   });

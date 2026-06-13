@@ -1,176 +1,90 @@
 ---
-
 ---
 
 <footer
-  class="bg-surface border-t border-outline-variant/30 text-on-surface w-full py-16 px-6 sm:px-8 md:px-12 lg:px-16 flex flex-col items-center justify-center space-y-8 relative overflow-hidden"
+  class="bg-base-200 text-base-content w-full border-t border-base-300 relative overflow-hidden"
 >
-  <div
-    class="max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-4 gap-12 items-center relative z-10"
-  >
-    <!-- Graphic Image Left -->
-    <div class="lg:col-span-1 flex justify-center lg:justify-start">
-      <img
-        src="/logo.jpg"
-        alt="Graphic Illustration"
-        class="w-64 h-64 object-contain"
-      />
+  <div class="max-w-[1280px] mx-auto py-16 px-6 sm:px-8 md:px-12 lg:px-16 relative z-10">
+    <div class="footer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <!-- Logo & Address Branding -->
+      <aside class="flex flex-col gap-4">
+        <div class="flex items-center gap-2">
+          <img
+            src="/logo.jpg"
+            alt="WEB NHA TRANG Logo"
+            class="w-12 h-12 rounded-full object-contain border border-primary/20 shadow-md"
+          />
+          <div>
+            <h3 class="font-black text-lg tracking-tight text-primary">WEB NHA TRANG</h3>
+            <p class="text-[10px] text-base-content/50 uppercase tracking-widest font-bold">Chuyên nghiệp - Uy tín</p>
+          </div>
+        </div>
+        <p class="text-sm text-base-content/80 mt-2 font-bold uppercase text-primary">CÔNG TY TNHH WEB NHA TRANG</p>
+        <div class="space-y-3 text-sm text-base-content/70 font-medium">
+          <div class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
+            <span>Số 88 Tô Hiến Thành, Tân Lập,<br />TP Nha Trang, Tỉnh Khánh Hòa</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-lg">call</span>
+            <span>093.366.3112 - 093.366.3112</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+            <span>info@webnhatrang.com</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Links: Information -->
+      <nav>
+        <h6 class="footer-title opacity-85 text-base-content font-bold text-sm tracking-wider uppercase mb-4">Thông tin</h6>
+        <div class="flex flex-col gap-3 font-medium text-sm">
+          <a class="link link-hover text-base-content/70 hover:text-primary transition-colors" href="#">Giới thiệu công ty</a>
+          <a class="link link-hover text-base-content/70 hover:text-primary transition-colors" href="#">Thông tin đào tạo</a>
+          <a class="link link-hover text-base-content/70 hover:text-primary transition-colors" href="#">Thông tin chính sách</a>
+          <a class="link link-hover text-base-content/70 hover:text-primary transition-colors" href="#">Thông tin thanh toán</a>
+          <a class="link link-hover text-base-content/70 hover:text-primary transition-colors" href="#">Thông tin tuyển dụng</a>
+        </div>
+      </nav>
+
+      <!-- Links: Services -->
+      <nav>
+        <h6 class="footer-title opacity-85 text-base-content font-bold text-sm tracking-wider uppercase mb-4">Dịch vụ</h6>
+        <div class="flex flex-col gap-3 font-medium text-sm">
+          <a class="link link-hover text-base-content/70 hover:text-primary transition-colors" href="https://webdalat.pys.vn/" target="_blank" rel="noopener noreferrer">Thiết kế Website Đà Lạt</a>
+          <a class="link link-hover text-base-content/70 hover:text-primary transition-colors" href="https://www.webtuyhoa.com" target="_blank" rel="noopener noreferrer">Thiết kế Website Tuy Hòa</a>
+          <a class="link link-hover text-base-content/70 hover:text-primary transition-colors" href="https://www.webphuyen.com" target="_blank" rel="noopener noreferrer">Thiết kế Website Phú Yên</a>
+          <a class="link link-hover text-base-content/70 hover:text-primary transition-colors" href="https://www.webnhatrang.vn/" target="_blank" rel="noopener noreferrer">Thiết kế Website Nha Trang</a>
+          <a class="link link-hover text-base-content/70 hover:text-primary transition-colors" href="https://webcamranh.pys.vn/" target="_blank" rel="noopener noreferrer">Thiết kế Website Cam Ranh</a>
+        </div>
+      </nav>
+
+      <!-- Tech stack / Badge section -->
+      <div>
+        <h6 class="footer-title opacity-85 text-base-content font-bold text-sm tracking-wider uppercase mb-4">Chứng nhận</h6>
+        <div class="flex flex-col gap-4">
+          <div class="p-4 rounded-2xl bg-base-100 border border-base-300 shadow-sm flex items-center gap-3">
+            <span class="material-symbols-outlined text-success text-3xl">verified_user</span>
+            <div>
+              <p class="font-bold text-xs">Hệ Thống An Toàn</p>
+              <p class="text-[10px] text-base-content/60 font-medium">Bảo mật SSL & Backup</p>
+            </div>
+          </div>
+          <div class="p-4 rounded-2xl bg-base-100 border border-base-300 shadow-sm flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+            <div>
+              <p class="font-bold text-xs">Tối Ưu Tốc Độ</p>
+              <p class="text-[10px] text-base-content/60 font-medium">Đạt điểm xanh Google</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- Links & Company Info Right -->
-    <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
-      <!-- Company Info -->
-      <div class="space-y-4">
-        <h3
-          class="text-headline-md font-headline-md font-bold text-primary mb-6"
-        >
-          CÔNG TY TNHH WEB NHA TRANG
-        </h3>
-        <div class="flex items-start gap-3">
-          <span
-            class="material-symbols-outlined text-primary mt-1"
-            data-icon="location_on"
-          >
-            location_on
-          </span>
-          <p class="text-body-md font-body-md text-on-surface-variant">
-            Số 88 Tô Hiến Thành, Tân Lập,<br />TP Nha Trang, Tỉnh Khánh Hòa
-          </p>
-        </div>
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary" data-icon="call">
-            call
-          </span>
-          <p class="text-body-md font-body-md text-on-surface-variant">
-            093.366.3112 - 093.366.3112
-          </p>
-        </div>
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary" data-icon="mail">
-            mail
-          </span>
-          <p class="text-body-md font-body-md text-on-surface-variant">
-            info@webnhatrang.com
-          </p>
-        </div>
-      </div>
-
-      <!-- Information Links -->
-      <div>
-        <h4 class="text-headline-md font-headline-md text-deep-navy mb-6">
-          Thông tin
-        </h4>
-        <ul class="space-y-3">
-          <li>
-            <a
-              class="text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-300"
-              href="#"
-            >
-              Giới thiệu công ty
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-300"
-              href="#"
-            >
-              Thông tin đào tạo
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-300"
-              href="#"
-            >
-              Thông tin chính sách
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-300"
-              href="#"
-            >
-              Thông tin thanh toán
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-300"
-              href="#"
-            >
-              Thông tin tuyển dụng
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Services Links -->
-      <div>
-        <h4 class="text-headline-md font-headline-md text-deep-navy mb-6">
-          Dịch vụ
-        </h4>
-        <ul class="space-y-3">
-          <li>
-            <a
-              class="text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-300"
-              href="https://webdalat.pys.vn/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Thiết kế Website Đà Lạt
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-300"
-              href="https://www.webtuyhoa.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Thiết kế Website Tuy Hòa
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-300"
-              href="https://www.webphuyen.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Thiết kế Website Phú Yên
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-300"
-              href="https://www.webnhatrang.vn/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Thiết kế Website Nha Trang
-            </a>
-          </li>
-          <li>
-            <a
-              class="text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-300"
-              href="https://webcamranh.pys.vn/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Thiết kế Website Cam Ranh
-            </a>
-          </li>
-        </ul>
-      </div>
+    <!-- Copyright -->
+    <div class="border-t border-base-300 pt-8 mt-12 text-center text-sm text-base-content/50 font-medium">
+      <p>© 2026 WEB NHA TRANG. Thiết kế và phát triển với ❤️ tại Nha Trang.</p>
     </div>
-  </div>
-
-  <!-- Copyright -->
-  <div
-    class="w-full border-t border-outline-variant/30 pt-8 mt-8 text-center relative z-10"
-  >
-    <p class="text-body-md font-body-md text-on-surface-variant">
-      © 2026 WEB NHA TRANG. Made with ❤️ in Nha Trang.
-    </p>
   </div>
 </footer>

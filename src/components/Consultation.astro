@@ -3,37 +3,41 @@
 
 <section
   id="contact"
-  class="py-16 px-6 sm:px-8 md:px-12 lg:px-16 bg-white border-t border-outline-variant/20 relative"
+  class="py-20 px-6 sm:px-8 md:px-12 lg:px-16 bg-base-100 border-t border-base-200 relative overflow-hidden"
 >
   <div
-    class="max-w-container-max mx-auto scroll-animate fade-in-up"
+    class="max-w-[1280px] mx-auto scroll-animate fade-in-up"
   >
     <div
-      class="bg-primary/5 rounded-[2rem] p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 border border-primary/10"
+      class="card lg:card-side bg-gradient-to-br from-primary/10 via-info/5 to-base-100 border border-primary/20 shadow-2xl p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 rounded-[2rem]"
     >
-      <div class="max-w-2xl">
-        <h2 class="text-headline-lg font-headline-lg text-deep-navy mb-4">
+      <div class="max-w-2xl text-left">
+        <h2 class="text-3xl font-black text-base-content mb-4">
           Yêu cầu tư vấn
         </h2>
-        <p class="text-body-lg font-body-lg text-on-surface-variant">
+        <p class="text-base sm:text-lg text-base-content/80">
           Bạn muốn chúng tôi chủ động liên hệ. Hãy để lại số điện thoại,
           chúng tôi sẽ chủ động gọi cho bạn !
         </p>
       </div>
+      
       <form
-        class="w-full lg:w-auto flex flex-col md:flex-row gap-4 shrink-0"
+        class="w-full lg:w-auto flex flex-col sm:flex-row gap-4 shrink-0 items-stretch sm:items-center"
         onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Chúng tôi đã nhận được thông tin và sẽ liên hệ lại sớm nhất.'); this.reset();"
       >
-        <input
-          class="w-full md:w-64 bg-white border border-outline-variant/50 rounded-full px-6 py-4 text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors shadow-sm"
-          placeholder="Số điện thoại"
-          type="tel"
-          pattern="[0-9]{10,11}"
-          required
-        />
+        <div class="form-control w-full sm:w-64">
+          <input
+            class="input input-bordered rounded-full px-6 py-4 h-12 bg-base-100 border-base-300 focus:input-primary text-base-content shadow-sm"
+            placeholder="Số điện thoại của bạn"
+            type="tel"
+            pattern="[0-9]{10,11}"
+            required
+          />
+        </div>
         <button
-          class="bg-gradient-primary text-on-primary px-10 py-4 rounded-full font-bold hover:shadow-lg transition-all whitespace-nowrap cursor-pointer hover:scale-[1.02] duration-200"
+          class="btn btn-primary rounded-full px-10 h-12 text-white font-bold tracking-wider hover:shadow-lg transition-all whitespace-nowrap hover:scale-[1.02] duration-200 border-none"
           type="submit"
+          style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-vibrant-blue) 100%);"
         >
           GỬI NGAY
         </button>

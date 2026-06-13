@@ -1,53 +1,55 @@
 ---
-
 ---
 
 <section
-  class="relative pt-40 pb-20 md:pb-32 px-6 sm:px-8 md:px-12 lg:px-16 overflow-hidden bg-gradient-to-br from-surface via-surface-container-low to-surface min-h-[95vh] flex items-center"
+  class="relative pt-40 pb-20 md:pb-32 px-6 sm:px-8 md:px-12 lg:px-16 overflow-hidden bg-gradient-to-br from-base-100 via-base-200 to-base-100 min-h-[95vh] flex items-center"
 >
-  <!-- Background Ambient Floating Blobs -->
+  <!-- Background Ambient Floating Blobs - Highly Vibrant -->
   <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
     <div
-      class="floating-blob w-80 h-80 bg-primary-container/30 top-12 left-10"
+      class="floating-blob w-80 h-80 bg-primary/30 top-12 left-10 blur-[90px]"
       style="animation-duration: 16s;"
     >
     </div>
     <div
-      class="floating-blob w-[450px] h-[450px] bg-vibrant-blue/20 right-[-100px] top-[-50px]"
+      class="floating-blob w-[450px] h-[450px] bg-secondary/20 right-[-100px] top-[-50px] blur-[100px]"
       style="animation-duration: 20s; animation-delay: -3s;"
     >
     </div>
     <div
-      class="floating-blob w-96 h-96 bg-secondary-container/20 bottom-10 left-[20%]"
+      class="floating-blob w-96 h-96 bg-info/25 bottom-10 left-[20%] blur-[90px]"
       style="animation-duration: 18s; animation-delay: -7s;"
     >
     </div>
   </div>
 
-  <div class="absolute inset-0 hero-pattern z-0 opacity-40"></div>
+  <!-- Background Pattern - Polished Dot & Grid -->
+  <div class="absolute inset-0 hero-pattern z-0 opacity-30"></div>
 
   <div
-    class="max-w-container-max mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full"
+    class="max-w-[1280px] mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full"
   >
     <!-- Left Column Content -->
     <div class="space-y-6 scroll-animate fade-in-left">
       <div
-        class="inline-flex items-center gap-2 bg-primary/5 px-4 py-1.5 rounded-full border border-primary/10"
+        class="inline-flex items-center gap-2 bg-gradient-to-r from-primary/15 via-info/10 to-secondary/15 px-4 py-2 rounded-full border border-primary/30 shadow-sm"
       >
-        <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
-        <p class="text-xs font-semibold text-primary tracking-widest uppercase">
+        <span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+        <p class="text-xs font-black text-primary tracking-widest uppercase">
           Chào mừng đến với Web Nha Trang
         </p>
       </div>
+      
       <h1
-        class="text-3xl sm:text-5xl lg:text-display-lg text-deep-navy leading-[1.15] font-extrabold tracking-tight"
+        class="text-4xl sm:text-5xl lg:text-[56px] lg:leading-[1.12] text-base-content font-black tracking-tight"
       >
         Thiết kế website<br />
-        <span class="text-gradient">Nha Trang</span><br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-info to-secondary drop-shadow-[0_4px_15px_rgba(0,188,212,0.25)]">Nha Trang</span><br />
         - Chuẩn SEO
       </h1>
+      
       <p
-        class="text-body-md md:text-body-lg text-on-surface-variant max-w-lg leading-relaxed"
+        class="text-base sm:text-lg text-base-content/85 max-w-lg leading-relaxed font-medium"
       >
         Hơn 10 năm hoạt động về dịch vụ Thiết kế Web Nha Trang, chúng tôi tự tin
         giúp quý khách sở hữu website chuyên nghiệp để quảng bá thương hiệu và
@@ -56,72 +58,80 @@
 
       <div class="pt-4 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
         <a
-          class="inline-flex items-center justify-center bg-gradient-primary text-on-primary px-8 py-4 rounded-full font-bold text-sm shadow-xl shadow-primary-container/25 hover:shadow-primary-container/40 hover:-translate-y-0.5 transition-all duration-300 relative overflow-hidden group shine-effect cursor-pointer w-full sm:w-auto text-center"
+          class="btn btn-primary rounded-full px-8 h-14 text-white font-bold text-sm shadow-[0_10px_25px_rgba(0,104,118,0.3)] hover:shadow-[0_15px_30px_rgba(0,104,118,0.5)] hover:-translate-y-0.5 transition-all duration-300 relative overflow-hidden group shine-effect cursor-pointer w-full sm:w-auto text-center border-none"
           href="https://zalo.me/0933663112"
+          style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-vibrant-blue) 100%);"
         >
-          <span class="relative">ĐĂNG KÝ WEB</span>
-          <span
-            class="material-symbols-outlined ml-2 relative text-lg group-hover:translate-x-1 transition-transform"
-            data-icon="arrow_forward"
-          >
-            arrow_forward
+          <span class="relative flex items-center justify-center gap-2">
+            ĐĂNG KÝ WEB
+            <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">
+              arrow_forward
+            </span>
           </span>
         </a>
         <a
-          class="inline-flex items-center justify-center border border-primary/30 hover:border-primary text-primary px-8 py-4 rounded-full font-bold text-sm bg-white/40 hover:bg-primary/5 transition-all duration-300 backdrop-blur-md cursor-pointer w-full sm:w-auto text-center"
+          class="btn btn-outline btn-primary rounded-full px-8 h-14 font-bold text-sm bg-transparent hover:text-white hover:border-primary hover:shadow-[0_10px_20px_rgba(0,104,118,0.15)] transition-all duration-300 cursor-pointer w-full sm:w-auto text-center"
           href="#services"
         >
-          <span>TÌM HIỂU THÊM</span>
+          TÌM HIỂU THÊM
         </a>
       </div>
     </div>
 
-    <!-- Right Column Mockup Image -->
-    <div class="relative scroll-animate fade-in-right mt-8 lg:mt-0">
-      <!-- Ambient Glow Behind Image -->
+    <!-- Right Column Image Area -->
+    <div class="relative scroll-animate fade-in-right mt-8 lg:mt-0 flex justify-center items-center">
+      <!-- Ambient Glow Behind Image - Neon Gradients -->
       <div
-        class="absolute -inset-4 bg-gradient-to-r from-primary-container to-vibrant-blue rounded-[2.5rem] blur-3xl opacity-25 animate-pulse"
-        style="animation-duration: 5s;"
+        class="absolute -inset-10 bg-gradient-to-tr from-primary/35 via-info/35 to-secondary/40 rounded-full blur-[80px] opacity-75 animate-pulse"
+        style="animation-duration: 8s;"
       >
       </div>
 
-      <!-- Mockup Window -->
+      <!-- Decorative Grid/Dot Pattern Behind Card -->
+      <div class="absolute -top-10 -right-10 w-40 h-40 bg-[radial-gradient(var(--color-primary)_1.5px,transparent_1.5px)] [background-size:16px_16px] opacity-35 pointer-events-none"></div>
+      <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-[radial-gradient(var(--color-info)_1.5px,transparent_1.5px)] [background-size:16px_16px] opacity-35 pointer-events-none"></div>
+
+      <!-- 3D Card Container with Neon Gradient Border -->
       <div
-        class="glass-premium rounded-[2.5rem] p-4 relative overflow-hidden shadow-2xl shadow-deep-navy/5 transform hover:-translate-y-2.5 transition-all duration-500 hover:shadow-primary/10"
+        class="relative p-2 rounded-[2.5rem] bg-gradient-to-tr from-primary via-info to-secondary shadow-[0_30px_70px_rgba(0,104,118,0.35)] hover:shadow-[0_40px_90px_rgba(0,104,118,0.5)] transform hover:-translate-y-3 hover:rotate-1 transition-all duration-700 ease-out z-10 w-full max-w-[550px]"
+      >
+        <!-- Inner Card with Glass border -->
+        <div class="rounded-[2.3rem] overflow-hidden bg-base-100 p-0 border border-white/20">
+          <img
+            alt="Giao diện website công nghệ của Web Nha Trang"
+            class="w-full object-cover aspect-[4/3] transform hover:scale-105 transition-transform duration-700 ease-out"
+            src="/images/hero-mockup.png"
+          />
+        </div>
+      </div>
+
+      <!-- Floating Interactive Badge - Placed outside the overflow-hidden card to prevent clipping -->
+      <div
+        class="absolute -bottom-4 -left-4 md:bottom-8 md:left-8 bg-base-100/90 backdrop-blur-md border border-base-200/60 rounded-2xl p-4 shadow-[0_20px_40px_rgba(0,0,0,0.15)] flex items-center gap-4 animate-float-slow z-20 hover:scale-105 transition-transform duration-300 select-none text-base-content"
       >
         <div
-          class="flex items-center gap-1.5 pb-3 px-2 border-b border-white/20 mb-3 opacity-60"
+          class="w-12 min-w-[3rem] h-12 bg-primary/15 p-3 rounded-full relative flex items-center justify-center"
         >
-          <span class="w-3 h-3 rounded-full bg-red-400"></span>
-          <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
-          <span class="w-3 h-3 rounded-full bg-green-400"></span>
-        </div>
-        <img
-          alt="Tech office environment with modern setup"
-          class="rounded-2xl w-full object-cover aspect-[4/3] shadow-inner"
-          src="https://lh3.googleusercontent.com/aida/AP1WRLvTgJQBWzx0rRjh9xy63X5jf42It5sfp_mN1rYRpnddWjpXunof9BUMjLM9W1eeicDcJjw5ZYwmCVzbNiBSxIKgogX0LDwxWVNH8Wuvs3tOs7XRvate5XkyctgqIDQHGdK1LYxsEOlPe6glkphKtla88H2RPsuJlkExFaqnQmJJrdUne-TySkIZu2KsuvS1USiFY1KdoTHMmM8imeb2uu5K-R7R04YIpvr8pJVXLnpWvaZT-W919brjBhs"
-        />
-
-        <!-- Floating Interactive Badge -->
-        <div
-          class="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md border border-white/60 rounded-2xl p-4 shadow-xl flex items-center gap-4 animate-float-slow z-20 hover:scale-105 transition-transform duration-300 select-none"
-        >
-          <div
-            class="w-12 min-w-12 h-12 bg-primary/10 p-3 rounded-full relative"
+          <div class="sonar-wave text-primary"></div>
+          <span
+            class="material-symbols-outlined text-primary text-2xl"
           >
-            <div class="sonar-wave text-primary"></div>
-            <span
-              class="material-symbols-outlined text-primary text-2xl"
-              data-icon="trending_up"
-            >
-              trending_up
-            </span>
-          </div>
-          <div>
-            <p class="font-bold text-sm text-deep-navy">Tăng trưởng SEO</p>
-            <p class="text-xs font-semibold text-primary">+200% traffic</p>
-          </div>
+            trending_up
+          </span>
         </div>
+        <div>
+          <p class="font-black text-sm">Tăng trưởng SEO</p>
+          <p class="text-xs font-black text-primary">+200% traffic</p>
+        </div>
+      </div>
+
+      <!-- Secondary Floating Badge - Neon Tech -->
+      <div
+        class="absolute -top-4 -right-4 bg-secondary text-white border border-white/20 rounded-2xl p-3 px-4 shadow-[0_20px_40px_rgba(0,0,0,0.2)] flex items-center gap-2 animate-float-slow z-20 hover:scale-105 transition-transform duration-300 select-none"
+        style="animation-delay: -3.5s;"
+      >
+        <span class="material-symbols-outlined text-sm animate-spin" style="animation-duration: 4s;">sync</span>
+        <span class="text-xs font-black tracking-wider uppercase">UI/UX Premium</span>
       </div>
     </div>
   </div>
